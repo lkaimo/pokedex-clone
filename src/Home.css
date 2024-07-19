@@ -1,0 +1,65 @@
+body {
+  background-image: url('../public/img/background4.jpg');
+  background-size: cover;
+  /* or 'contain' depending on your preference */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  /* optional, makes the background image fixed */
+  /* You can also add other background properties like background-position, background-color, etc. */
+}
+
+#home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 85vh;
+  /* Set the height to 100% of the viewport height */
+}
+
+.comic-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: #ff5252;
+  border: 2px solid #000;
+  border-radius: 10px;
+  box-shadow: 5px 5px 0px #000;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.comic-button:hover {
+  background-color: #fff;
+  color: #ff5252;
+  border: 2px solid #ff5252;
+  box-shadow: 5px 5px 0px #ff5252;
+}
+
+.comic-button:active {
+  background-color: #fcf414;
+  box-shadow: none;
+  transform: translateY(4px);
+}
+
+@keyframes zoomInOut {
+
+0%,
+100% {
+  transform: scale(1);
+}
+
+25%,
+75% {
+  transform: scale(1.1);
+  /* Adjust the scale factor for zoom in/out */
+}
+
+50% {
+  transform: scale(1);
+}
+}

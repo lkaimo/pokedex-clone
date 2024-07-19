@@ -1,0 +1,187 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Hide horizontal scrollbar to prevent unwanted shift */
+}
+
+#video-background {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1000;
+}
+
+@keyframes a-dance {
+  0% {
+      transform: translate(0, 0);
+  }
+  25% {
+      transform: translate(10px, -10px);
+  }
+  50% {
+      transform: translate(0, 0);
+  }
+  75% {
+      transform: translate(-10px, 10px);
+  }
+  100% {
+      transform: translate(0, 0);
+  }
+}
+
+.dancing-pokedex {
+  width: 175px;
+  height: 175px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 20px;
+  animation: a-dance 2s infinite; /* Adjust the animation duration as needed */
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+button {
+  padding: 8px 12px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.pokemon-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.pokemon-card {
+  width: calc(16.66% - 10px);
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.5); /* Adjust the last parameter for transparency */
+}
+
+.pokemon-card:hover {
+  background-color: #e0e0e0;
+}
+
+.pokemon-card h2 {
+  font-size: 14px; /* Adjust the font size as per your preference */
+  margin-bottom: 5px; /* Add some spacing between name and image */
+}
+
+.pokemon-card img {
+  width: 100px;
+  height: 100px;
+}
+
+/* Adjust number of cards per row for different screen sizes */
+@media (max-width: 767px) {
+  .pokemon-card {
+      width: calc(33.33% - 10px);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .pokemon-card {
+      width: calc(25% - 10px);
+  }
+}
+
+@media (min-width: 992px) {
+  .pokemon-card {
+      width: calc(14.28% - 10px);
+  }
+}
+
+/* Add at the end of your CSS file */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  width: 80%;
+  max-width: 600px;
+}
+
+.close {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 2em;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.dancing-pokedex {
+  width: 125px;
+  height: 125px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 20px;
+  cursor: pointer; /* Add this line to change the cursor to a pointer */
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+  }
+  40% {
+      transform: translateY(-20px);
+  }
+  60% {
+      transform: translateY(-10px);
+  }
+}
+
+#search-modal .modal-content {
+  text-align: center;
+  background: url('../public/img/background3.png') center/cover no-repeat;
+  height: 300px;
+  justify-content: center;
+  animation: bounce 3s infinite;
+  border: 5px solid rgb(0, 0, 0);
+  border-radius: 15%;
+}
+
+#search-modal input {
+  border-radius: 5px;
+  border: 3px solid rgb(255, 0, 0);
+  padding: 5px;
+}
+
