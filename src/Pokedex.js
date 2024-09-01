@@ -162,10 +162,12 @@ const Pokedex = () => {
       return `<li>${capitalizeFirstLetter(ability.ability.name)}</li>`;
     }).join('');
 
+    /*
     const statsHTML = pokemonData.stats.map(stat => {
       return `<p>${stat.stat.name}: ${stat.base_stat}</p>`;
     }).join('');
-
+*/
+    
     // Display the details inside the modal
     const capitalizedPokemonName = capitalizeFirstLetter(pokemonData.name);
     const imgSrc = pokemonData.sprites.front_default || 'img/default.png';
