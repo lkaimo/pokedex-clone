@@ -182,7 +182,7 @@ const Pokedex = () => {
                            <p>Types:</p>
                            <p>${typeImagesHTML}</p>
                            <p>Abilities:</p>
-                           <ul>${abilitiesHTML}</ul>;
+                           <ul>${abilitiesHTML}</ul>`;
 
     modal.style.display = 'flex';
     const closeBtn = document.getElementsByClassName('close')[0];
