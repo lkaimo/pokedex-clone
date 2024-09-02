@@ -181,7 +181,8 @@ const Pokedex = () => {
                            <p>Weight: ${pokemonData.weight} hectograms</p>
                            <p>Types:</p>
                            <p>${typeImagesHTML}</p>
-                           <p>Abilities: <ul>${abilitiesHTML}</ul></p>;
+                           <p>Abilities:</p>
+                           <ul>${abilitiesHTML}</ul>;
 
     modal.style.display = 'flex';
     const closeBtn = document.getElementsByClassName('close')[0];
